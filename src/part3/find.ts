@@ -42,8 +42,8 @@ export const returnSquaredIfFoundEven_v2 = (a : number[]) : Result<number> => {
     return bind(r,getSquareResult);
 }
 
-export const returnSquaredIfFoundEven_v3 = (a : number[]) : number => {
+export const returnSquaredIfFoundEven_v3 = (a : number[]) : number => 
+{
     const r : Result<number> = findResult(isEven, a);
-
-    
+    return either(r,getSquare,ifFailure);   
 }

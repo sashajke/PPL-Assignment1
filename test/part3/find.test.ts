@@ -26,12 +26,12 @@ describe("Find", () => {
            expect(result).to.satisfy(R.isFailure);
         });
 
-        // it("returns the first even number squared in v3", () => {
-        //     expect(F.returnSquaredIfFoundEven_v3([1, 2, 3])).to.equal(4);
-        // });
+        it("returns the first even number squared in v3", () => {
+            expect(F.returnSquaredIfFoundEven_v3([1, 2, 3])).to.equal(4);
+        });
 
-        // it("returns -1 if no even numbers are in the array in v3", () => {
-        //     expect(F.returnSquaredIfFoundEven_v3([1, 3, 5])).to.equal(-1);
-        // });
+        it("returns -1 if no even numbers are in the array in v3", () => {
+            expect(F.returnSquaredIfFoundEven_v3([1, 3, 5])).to.equal(-1);
+        });
     });
 });
