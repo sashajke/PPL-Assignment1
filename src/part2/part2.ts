@@ -62,7 +62,8 @@ const isPairedRec : (input : string[] , index : number, parentheses : string) =>
     {
         return parentheses.length == 0;
     }
-    const nextLetter : string[] = [input[index]];
+    const nextLetter : string[] = [input[index]]; // an array to use the filter to compare to the openParentheses array
+    // isOpen is a boolean value that says if the letter is open parenteses
     const isOpen : boolean = nextLetter.filter(function(elem) {
         return openingParentheses.indexOf(elem) > -1;
     }).length > 0;
