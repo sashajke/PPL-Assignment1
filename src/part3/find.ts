@@ -12,12 +12,9 @@ export const findResult = <T>(pred: (x : T) => boolean, a: T[]) : Result<T> => {
     const arr : T[] = a.filter(pred);
     if(arr.length === 0) // no object that passed the predicate check , need to return failure
     {
-        return {tag:"Failure",message: "No object found in the array"};
+        return makeFailure("No object found in the array");
     }
-    else // return an OK of the first element in the array
-    {
-        return {tag:"Ok", value: arr[0]};
-    }
+    return makeOk(arr[0]);
 }
 
 /* Client code */
