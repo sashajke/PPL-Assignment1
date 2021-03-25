@@ -17,6 +17,6 @@ export const pop : State<Stack,number> = (stack : Stack) : [Stack,number] => {
     return [newStack,numberToReturn];
 }
 export const stackManip : State<Stack,undefined> = (stack : Stack) : [Stack,undefined] =>{
-    const func = bind(pop,x => bind(push(x*x),num1 => bind(pop,y => push(x+y))));
+    const func = bind(pop,(x : number) => bind(push(x*x),(num1 : undefined) => bind(pop,(y : number) => push(x+y))));
     return func(stack);
 }

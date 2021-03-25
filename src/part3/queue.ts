@@ -19,6 +19,6 @@ export const dequeue : State<Queue,number> = (queue : Queue) : [Queue,number] =>
 
 
 export const queueManip : State<Queue,number|undefined> = (queue : Queue) : [Queue,number|undefined] =>{
-    const func = bind(dequeue,num => bind(enqueue(num*2),num1 => bind(enqueue(num/3),num2 => dequeue)));
+    const func = bind(dequeue,(num:number) => bind(enqueue(num*2),(num1: number | undefined) => bind(enqueue(num/3),(num2: number | undefined) => dequeue)));
     return func(queue);
 }

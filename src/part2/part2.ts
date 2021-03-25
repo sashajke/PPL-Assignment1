@@ -21,7 +21,6 @@ export const countVowels : (str : string) => number = (str : string):number =>
     const arrOfVowels : string[] = R.filter(isVowel,arrOfString);
     return arrOfVowels.length;
 }
-console.log(countVowels("This is SOME TextoO"));
 
 // helper function to question 2
 
@@ -51,7 +50,6 @@ export const runLengthEncoding : (str : string) => string = (str : string) : str
     return compressString(stringToArray(str), "",str.charAt(0),0,0);
 }
 
-console.log(runLengthEncoding("aaaabbbccdaa"));
 
 
 const isPairedRec : (input : string[] , index : number, parentheses : string) => boolean = 
@@ -95,4 +93,3 @@ export const isPaired : (str : string) => boolean = (str : string) : boolean =>{
     return isPairedRec(stringToArray(str),0,"");
 }
 
-console.log(isPaired("This is ]some[ (text)"));
